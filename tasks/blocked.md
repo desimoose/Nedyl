@@ -20,6 +20,16 @@ Editing this file (supplying a PREREQ or clearing a gate) is a Loop-3 trigger: t
 | D-1 | ~~Which Dictate to fork~~ **RESOLVED 2026-07-02: v4 (FlorisBoard-based default branch)**, pin `acaf2f07a3d475b6bb63bf614ce4cf9cdcb5370d`; strip list to be drafted at 1c.1 — see harness/research/dictate-internals.md | ~~1c.1~~ unblocked | done |
 | D-2 | **DCO vs CLA** — Christopher chose "decide later, BEFORE first outside PR." Guard: repo launches issues-only / PRs closed (or a CONTRIBUTING.md note that PRs are held) until this is decided. One merged PR under ambiguity poisons the relicensing option | first outside PR merge; NOT 0.1 | before contributions open — revisit at Phase 0 exit |
 
+| D-3 | **RESOLVED: repo PRIVATE until launch** (owner deviation from PRD "public day one"). Flip-to-public trigger = start of Phase 2 (F-Droid requires public repo + weeks of review queue — do not slip this) | nothing now; flip-to-public checklist below at Phase 2 | decided 2026-07-02 |
+
+## Flip-to-public checklist (execute at Phase 2 start, per D-3)
+
+- [ ] Make repo public; verify LICENSE/THIRD_PARTY_LICENSES/SECURITY render.
+- [ ] Branch protection: require the `gitleaks` status check on main (not enforceable on a free-plan private repo — that's why it waits).
+- [ ] Enable private vulnerability reporting (public-repo feature; SECURITY.md already points to it).
+- [ ] Re-audit history for secrets before the flip (gitleaks full-history run) — history becomes world-readable retroactively.
+- [ ] Then: F-Droid submission (2.2) and launch sequence per PRD §13.
+
 ## Awaiting-human verification lanes (Loop 2)
 
 Held until Christopher confirms; never auto-merged:
