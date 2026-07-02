@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+build/
+target/
+.gradle/
+.idea/
+.vscode/
+.skill-install-staging/
+files.zip
+
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
